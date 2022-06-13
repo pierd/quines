@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+TEMP=`mktemp -d`
+rustc -o ${TEMP}/compiled $1
+${TEMP}/compiled
+rm -r ${TEMP}
